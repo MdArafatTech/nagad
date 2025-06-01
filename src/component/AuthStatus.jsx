@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../providers/AuthProvider"; // ✅ Ensure correct path
 
-const AuthStatus = () => {
+const AuthStatus = ({ closeDrawer }) => {
   const { user, logOut } = useAuth();
   const navigate = useNavigate();
 
@@ -10,6 +10,7 @@ const AuthStatus = () => {
     try {
       await logOut();
       alert("Logged out successfully!");
+      if (closeDrawer) closeDrawer(); // ✅ close drawer
     } catch (err) {
       alert("Logout failed: " + err.message);
     }
@@ -17,6 +18,7 @@ const AuthStatus = () => {
 
   const goToLogin = () => {
     navigate("/login");
+    if (closeDrawer) closeDrawer(); // ✅ close drawer
   };
 
   return (
@@ -56,5 +58,6 @@ const AuthStatus = () => {
     </div>
   );
 };
+
 
 export default AuthStatus;

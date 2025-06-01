@@ -14,7 +14,7 @@ const Terms = () => {
   if (!termsData) return <div>Loading...</div>;
 
   return (
-    <div className="p-4 mx-auto ">
+    <div className="p-4 mx-auto mt-25">
       <div className="">
         <img className="w-full mb-6" src={term} alt="Terms and Conditions" />
       </div>

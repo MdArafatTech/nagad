@@ -41,7 +41,7 @@ const OfferDetail = () => {
   if (!offer) return <div className="p-6 text-center">Loading...</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-6 mt-20">
+    <div className="max-w-4xl mx-auto p-6 mt-25">
       {/* Back to All Offers Button */}
      
 

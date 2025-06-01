@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import headericon from "../assets/nogod-icon.png";
 import {
@@ -14,7 +15,7 @@ const navLinkStyle =
   "transition-transform duration-200 transform hover:text-blue-600 hover:scale-105";
 
 const Header = () => {
-  // Function to close drawer
+  // Function to close drawer (used by all buttons)
   const closeDrawer = () => {
     const drawerCheckbox = document.getElementById("my-drawer-3");
     if (drawerCheckbox) drawerCheckbox.checked = false;
@@ -34,34 +35,21 @@ const Header = () => {
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-6">
               <ul className="menu menu-horizontal text-lg gap-4">
-                <li>
-                  <Link to="/" className={navLinkStyle}>
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services" className={navLinkStyle}>
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/offers" className={navLinkStyle}>
-                    Offers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about-us" className={navLinkStyle}>
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/career" className={navLinkStyle}>
-                    Career
-                  </Link>
-                </li>
-
-               <AuthStatus closeDrawer={closeDrawer} />
+                {[
+                  { to: "/", label: "Home" },
+                  { to: "/services", label: "Services" },
+                  { to: "/offers", label: "Offers" },
+                  { to: "/about-us", label: "About Us" },
+                  { to: "/career", label: "Career" },
+                ].map(({ to, label }) => (
+                  <li key={to}>
+                    <Link to={to} className={navLinkStyle}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
+              <AuthStatus closeDrawer={closeDrawer} />
             </div>
 
             {/* Mobile Drawer Toggle */}
@@ -76,7 +64,7 @@ const Header = () => {
         </div>
 
         {/* Drawer Sidebar */}
-        <div className="drawer-side z-550">
+        <div className="drawer-side z-50">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
           <div className="bg-white text-black h-full w-full flex flex-col justify-between items-center py-5 px-6 relative">
             {/* Close Icon */}
@@ -87,7 +75,7 @@ const Header = () => {
               <FaTimes />
             </label>
 
-            {/* Links */}
+            {/* Drawer Links */}
             <ul className="flex flex-col items-center gap-6 text-xl mt-10">
               {[
                 { to: "/", label: "Home" },
@@ -97,18 +85,13 @@ const Header = () => {
                 { to: "/career", label: "Career" },
               ].map(({ to, label }) => (
                 <li key={to}>
-                  <Link
-                    to={to}
-                    className={navLinkStyle}
-                    onClick={closeDrawer}
-                  >
+                  <Link to={to} className={navLinkStyle} onClick={closeDrawer}>
                     {label}
                   </Link>
                 </li>
               ))}
-
               <li>
-               <AuthStatus closeDrawer={closeDrawer} />
+                <AuthStatus closeDrawer={closeDrawer} />
               </li>
             </ul>
 

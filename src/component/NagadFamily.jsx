@@ -14,7 +14,7 @@ const NagadFamily = () => {
   if (!data) return <div className="text-center py-10">Loading...</div>;
 
   return (
-<div>
+<div className='mt-25'>
 
      <img
         src={dfs1}

@@ -16,6 +16,7 @@ import NagadGalary from '../component/NagadGalary';
 import Login from '../component/Login';
 import Register from '../component/Register';
 import AuthStatus from '../component/AuthStatus';
+import ScrollToTop from '../component/ScrollToTop';
 
 
 
@@ -87,6 +88,10 @@ const Routes = createBrowserRouter (
                 {
                     path:"/authstatus",
                     element:<AuthStatus></AuthStatus>
+                },
+                {
+                    path:"/scrolltotop",
+                    element:<ScrollToTop></ScrollToTop>
                 },
              
                 
