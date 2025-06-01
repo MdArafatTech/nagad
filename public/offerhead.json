@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "image": "/src/assets/offerp1.jpg"
+    "image": "offerp1.jpg"
   },
   {
     "id": 2,
-    "image": "/src/assets/offerp2.jpg"
+    "image": "offerp2.jpg"
   },
   {
     "id": 3,
-    "image": "/src/assets/offerp3.jpg"
+    "image": "offerp3.jpg"
   },
   {
     "id": 3,
-    "image": "/src/assets/offer6.jpg"
+    "image": "offer6.jpg"
   }
 ]

@@ -2,55 +2,55 @@
   {
     "id": 1,
     "badge": " Payment",
-    "image": "/src/assets/offer1.jpg",
+    "image": "offer1.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 2,
     "badge": " Remittance",
-    "image": "/src/assets/offer2.jpg",
+    "image": "offer2.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 3,
     "badge": " Add Money",
-    "image": "/src/assets/offer3.jpg",
+    "image": "offer3.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 4,
     "badge": " Mobile Recharge",
-    "image": "/src/assets/offer4.jpg",
+    "image": "offer4.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 5,
     "badge": " E-commerce",
-    "image": "/src/assets/offer5.jpg",
+    "image": "offer5.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 6,
     "badge": " Add Money",
-    "image": "/src/assets/offer6.jpg",
+    "image": "offer6.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 7,
     "badge": " Insurance",
-    "image": "/src/assets/offer7.jpg",
+    "image": "offer7.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 8,
     "badge": " Mobile Recharge",
-    "image": "/src/assets/offer8.jpg",
+    "image": "offer8.jpg",
     "buttonText": "View Offer"
   },
   {
     "id": 9,
     "badge": " Mobile Recharge",
-    "image": "/src/assets/offer9.jpg",
+    "image": "offer9.jpg",
     "buttonText": "View Offer"
   }
 ]
