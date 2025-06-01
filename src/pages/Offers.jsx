@@ -3,16 +3,54 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from "react-router-dom";
 
+// Import carousel images
+import offerp1 from "../assets/offerp1.jpg";
+import offerp2 from "../assets/offerp2.jpg";
+import offerp3 from "../assets/offerp3.jpg";
+
+
+
+// Import offer images
+import offer1 from "../assets/offer1.jpg";
+import offer2 from "../assets/offer2.jpg";
+import offer3 from "../assets/offer3.jpg";
+import offer4 from "../assets/offer4.jpg";
+import offer5 from "../assets/offer5.jpg";
+import offer6 from "../assets/offer6.jpg";
+import offer7 from "../assets/offer7.jpg";
+import offer8 from "../assets/offer8.jpg";
+import offer9 from "../assets/offer9.jpg";
+
+// Map image filenames from JSON to imported images
+const carouselMap = {
+  "offerp1.jpg": offerp1,
+  "offerp2.jpg": offerp2,
+  "offerp3.jpg": offerp3,
+  "offer4.jpg": offer4
+};
+
+const offerImageMap = {
+  "offer1.jpg": offer1,
+  "offer2.jpg": offer2,
+  "offer3.jpg": offer3,
+  "offer4.jpg": offer4,
+  "offer5.jpg": offer5,
+  "offer6.jpg": offer6,
+  "offer7.jpg": offer7,
+  "offer8.jpg": offer8,
+  "offer9.jpg": offer9,
+};
+
 const Offers = () => {
-  const [images, setImages] = useState([]);
+  const [carouselImages, setCarouselImages] = useState([]);
   const [offers, setOffers] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetch("/offerhead.json")
       .then((res) => res.json())
-      .then((data) => setImages(data))
-      .catch((err) => console.error("Failed to load images:", err));
+      .then((data) => setCarouselImages(data))
+      .catch((err) => console.error("Failed to load carousel images:", err));
 
     fetch("/offers.json")
       .then((res) => res.json())
@@ -34,10 +72,10 @@ const Offers = () => {
         interval={3000}
         className="rounded-xl overflow-hidden shadow-lg mt-20"
       >
-        {images.map((item) => (
+        {carouselImages.map((item) => (
           <div key={item.id}>
             <img
-              src={item.image}
+              src={carouselMap[item.image]}
               alt={`Header ${item.id}`}
               className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover"
             />
@@ -63,7 +101,7 @@ const Offers = () => {
             >
               <div className="relative h-75 flex justify-center items-center bg-gray-100">
                 <img
-                  src={item.image}
+                  src={offerImageMap[item.image]}
                   alt={item.badge}
                   className="max-h-55 w-auto object-contain"
                 />
@@ -73,7 +111,7 @@ const Offers = () => {
               </div>
               <div className="p-4 text-center">
                 <Link to={`/offer/${item.id}`}>
-                  <button className="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+                  <button className="bg-red-600 text-white border border-red-500 px-5 py-2 rounded-full cursor-pointer hover:bg-white hover:text-red-500 transition">
                     View Offer
                   </button>
                 </Link>
