@@ -1,0 +1,149 @@
+{
+  "introduction": {
+    "summary": "Nagad is poised to become an essential component of Bangladesh’s financial fabric, aligned with the needs of the people and the Government’s development goals. It envisions a one-stop digital banking destination through industry-wide partnerships.",
+    "mission": "To provide comprehensive, digital, and ever-evolving financial services to the people and small businesses of Bangladesh."
+  },
+  "history": {
+    "launchDate": "March 26, 2019",
+    "authority": "Bangladesh Post Office",
+    "administrator": {
+      "name": "Md. Motasem Billah",
+      "designation": "Director, Bangladesh Bank",
+      "effectiveDate": "22 August 2024"
+    }
+  },
+  "managementBoard": {
+    "formedDate": "17 September 2024",
+    "members": [
+      {
+        "name": "Dr. K. A. S. Murshid",
+        "role": "Chairman",
+        "details": "Former Director General, Bangladesh Institute of Development Studies (BIDS)"
+      },
+      {
+        "name": "Khondokar Shakhawat Ali",
+        "role": "Member",
+        "details": "Visiting Research Fellow, BRAC Institute of Governance and Development, Brac University"
+      },
+      {
+        "name": "Dr. Bazlul Haque Khondker",
+        "role": "Member",
+        "details": "Research Director, Policy Research Institute (PRI) of Bangladesh"
+      },
+      {
+        "name": "Md. Anwar Hossain",
+        "role": "Member",
+        "details": "Former Executive Director, Bangladesh Bank"
+      },
+      {
+        "name": "Md. Farid Ahmed",
+        "role": "Member",
+        "details": "Postmaster General, Bangladesh Post Office"
+      }
+    ]
+  },
+  "impact": {
+    "customers": "9.5 crore",
+    "uddoktaNetwork": "3 lakh"
+  },
+  "awards": [
+    {
+      "title": "Best Brand Award",
+      "date": "December 2023",
+      "details": "Most Emerging Brand of Bangladesh by Bangladesh Brand Forum"
+    },
+    {
+      "title": "Best Payment Solution Award",
+      "date": "November 2023",
+      "details": "For E-Commerce at E-commerce Movers Award by E-Commerce Association of Bangladesh"
+    },
+    {
+      "title": "Digital Business Award",
+      "date": "November 2023",
+      "details": "Mastercard award for credit card bill payment contribution"
+    },
+    {
+      "title": "Visa Payments Excellence Award",
+      "date": "October 2023",
+      "details": "For 'Excellence in CyberSource – Payouts'"
+    },
+    {
+      "title": "Startup Summit Award",
+      "date": "July 2023",
+      "details": "‘Fastest to Unicorn’ Award – fastest Bangladeshi company valued over $1B"
+    },
+    {
+      "title": "WASA Bill Collection Award",
+      "date": "March 2023",
+      "details": "Top Bill Collection FY 2021-22"
+    },
+    {
+      "title": "Bangladesh Innovation Award",
+      "date": "February 2023",
+      "details": "Best Innovation in Financial Institutions – Nagad Islamic"
+    },
+    {
+      "title": "Commward",
+      "date": "August 2022",
+      "details": [
+        "Silver – PR",
+        "Bronze – Copywriting",
+        "Bronze – Music/Jingle",
+        "Bronze – Film Craft",
+        "Bronze – Art Direction"
+      ]
+    },
+    {
+      "title": "Most Innovative Digital Financial Service Brand",
+      "date": "April 2022",
+      "details": "By Global Brands Magazine (UK)"
+    },
+    {
+      "title": "Digital Marketing Award",
+      "date": "December 2021",
+      "details": "Bronze – App Marketing for 'T20 Quiz'"
+    },
+    {
+      "title": "Bangladesh Fintech Award",
+      "date": "November 2021",
+      "details": "Fintech Impact Award for innovations in account opening"
+    },
+    {
+      "title": "Mastercard Excellence Award",
+      "date": "November 2021",
+      "details": "Excellence in Mastercard Business (Online Merchant) 2020–21"
+    },
+    {
+      "title": "Commward",
+      "date": "August 2021",
+      "details": [
+        "Bronze – Efficacy ('Shob Hobe Nagad-e')",
+        "Silver – Integrated Marketing Communication ('Shob Hobe Nagad-e')"
+      ]
+    },
+    {
+      "title": "Global Economics Awards",
+      "date": "March 2021",
+      "details": [
+        "Most Innovative Digital Finance Services",
+        "Best New Mobile App in Digital Finance",
+        "World’s Fastest-Growing MFS"
+      ]
+    },
+    {
+      "title": "Business Tabloid Awards",
+      "date": "December 2020",
+      "details": "Best Digital Financial Services – Bangladesh 2020"
+    },
+    {
+      "title": "WITSA Award",
+      "date": "November 2020",
+      "details": "Digital Opportunity and Inclusion for promoting financial inclusion"
+    },
+    {
+      "title": "InclusiveFintech50",
+      "date": "October 2020",
+      "details": "Best Fintech Startup for 2020"
+    }
+  ]
+}

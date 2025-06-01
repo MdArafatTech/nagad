@@ -1,0 +1,23 @@
+{
+  "fraudPrevention": {
+    "warning": "Do not share the PIN, OTP or account balance of your Nagad account with anyone. Fraudsters can take advantage of your vulnerability to steal your hard-earned money from your account. Even by using your account, they can scam others by pretending to be you.",
+    "commonScams": [
+      "Requesting money over the phone disguised as a relative, influential person, top-level officer, etc.",
+      "Seeking money or other personal information by intruding into the Messenger inbox of someone you know by hacking their Facebook",
+      "Calling you at night in disguise of spiritual leader or someone called “Jiner Badshah”",
+      "Tempting with Cashback offers or lotteries from a popular organization/brand and asking for money as the registration fees procedures for participation",
+      "Sending fake SMS claiming that money has been mistakenly transferred and requesting to return the amount"
+    ],
+    "precautions": [
+      "If someone asks for money over the phone pretending to be a close relative or acquaintance, verify it by making a call to that very person’s number which is saved on your phone before making any transaction",
+      "To make sure about any offer from any popular company, contact their hotline numbers or customer care center directly",
+      "Check your account balance to confirm whether the money has been added to your account",
+      "Do not make any changes to your account based on someone else’s instructions",
+      "Stand firm against E-Hundy and be aware to prevent trading foreign currency online along with e-online betting and cryptocurrency transactions"
+    ]
+  },
+  "legalNotices": {
+    "message1": "E-Hundy is a form of money laundering, thus a punishable offense. Abstain from sending your hard-earned remittance to the country through E-Hundy and use legal or Banking channels instead. This very effort of yours can make a valuable contribution to building a remittance-rich Bangladesh.",
+    "message2": "According to the prevailing laws of the country, engaging in online trading foreign currency, investing in the foreign stock markets, online betting, and cryptocurrency transactions are all considered punishable offenses. Refrain yourself and your close ones from committing any such crimes."
+  }
+}

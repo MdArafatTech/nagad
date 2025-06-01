@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "image": "/src/assets/galary1.jpg"
+  },
+  {
+    "id": 2,
+    "image": "/src/assets/galary2.jpg"
+  },
+  {
+    "id": 3,
+    "image": "/src/assets/galary3.jpg"
+  },
+  {
+    "id": 4,
+    "image": "/src/assets/galary4.jpg"
+  },
+  {
+    "id": 5,
+    "image": "/src/assets/galary5.jpg"
+  },
+  {
+    "id": 6,
+    "image": "/src/assets/galary6.jpg"
+  },
+  {
+    "id": 7,
+    "image": "/src/assets/galary7.jpg"
+  },
+  {
+    "id": 8,
+    "image": "/src/assets/offer8.jpg"
+  },
+  {
+    "id": 9,
+    "image": "/src/assets/galary9.jpg"
+  }
+ 
+]
