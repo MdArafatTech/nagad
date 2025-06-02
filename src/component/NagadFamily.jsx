@@ -21,7 +21,7 @@ const NagadFamily = () => {
         alt="Digital Financial Services"
         className="w-full rounded-2xl shadow-md"
       />
-    <div className=" px-[7%] py-10 mt-20 bg-white  p-5 rounder-2xl text-black">
+    <div className=" px-[7%] py-10  bg-white  p-5 rounder-2xl text-black">
        
      
 

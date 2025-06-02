@@ -44,12 +44,13 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <img
-        src={contact1}
-        alt="Contact"
-        className="w-full h-auto rounded-2xl mb-6"
-      />
+    <div className="">
+     <img
+  src={contact1}
+  alt="Contact"
+  className="w-full h-full max-h-[100vh] object-cover rounded mb-6 shadow-md"
+/>
+
       <div className="px-6 sm:px-10 md:px-[7%]">
         <div className="info bg-white rounded-2xl py-5 px-6 sm:px-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form with Captcha */}
@@ -150,7 +151,7 @@ const Contact = () => {
                   btnText: "Email",
                 },
                 {
-                  icon: <IoLocationOutline className="text-red-500 text-2xl" />,
+                  icon: <IoLocationOutline className="text-red-500 text-5xl" />,
                   title: "Head Office",
                   desc:
                     "Delta Dahlia Tower (Level 13 and 14), 36 Kemal Ataturk Avenue, Banani, Dhaka -1213",
@@ -182,7 +183,7 @@ const Contact = () => {
               ))}
 
               <div
-                className="mt-6 rounded-2xl overflow-hidden border-2 border-red-500 relative"
+                className="mt-6 rounded-xl overflow-hidden border-2 border-red-500 relative"
                 style={{ paddingTop: "56.25%" }}
               >
                 <iframe

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -62,25 +63,26 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="w-full px-3 py-10  mx-auto">
+    <div className="w-full mt-10 ">
       {/* Header Carousel */}
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 3000 }}
-        pagination={{ clickable: true }}
-        loop={true}
-        className="rounded-xl overflow-hidden shadow-lg mt-20"
-      >
-        {images.map((item) => (
-          <SwiperSlide key={item.id}>
-            <img
-              src={imageMap[item.image]}
-              alt={`Header ${item.id}`}
-              className="w-full h-auto max-h-[80vh] object-contain"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Swiper
+  modules={[Autoplay, Pagination]}
+  autoplay={{ delay: 3000 }}
+  pagination={{ clickable: true }}
+  loop={true}
+  className=" overflow-hidden shadow-lg  w-full h-[300px] rounded sm:h-[400px] md:h-[500px] lg:h-[600px]"
+>
+  {images.map((item) => (
+    <SwiperSlide key={item.id} className="w-full h-full">
+      <img
+        src={imageMap[item.image]}
+        alt={`Header ${item.id}`}
+        className="w-full h-[80%] object-maintain"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
+
 
       {/* Offers Section Title */}
       <div className="text-3xl text-center font-bold my-6">
@@ -137,71 +139,78 @@ const HomePage = () => {
         </Link>
       </div>
 
-      {/* Account Details */}
-      <div className="account px-[7%] my-10 text-center shadow-2xl">
-        <h1 className="text-3xl font-bold">Open Nagad Account</h1>
-        <h1 className="text-xl text-red-500 mb-10">
+     {/* Account Details */}
+      <motion.div
+        className="account px-4 sm:px-[7%] my-10 text-center shadow-2xl py-10 rounded-xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h1 className="text-2xl sm:text-3xl font-bold mb-2">Open Nagad Account</h1>
+        <h2 className="text-lg sm:text-xl text-red-500 mb-8">
           3 easy steps to open your Nagad account
-        </h1>
+        </h2>
 
-        <div className="nagad-app grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10">
-          <div className="one flex flex-col justify-center items-center hover:scale-105 transition duration-200">
-            <img
-              className=" bg-white w-full max-w-[200px] h-auto rounded-2xl pt-3 shadow-lg"
-              src={account1}
-              alt=""
-            />
-            <div className="step text-center bg-white text-black p-8 pt-10 rounded-4xl shadow-md">
-              <h1 className="text-xl font-bold text-red-500">Step 1</h1>
-              <h1>Scan your nid and share necessary information</h1>
-            </div>
-          </div>
-
-          <div className="one flex flex-col justify-center items-center hover:scale-105 transition duration-00">
-            <img
-              className="w-full bg-white max-w-[200px] h-auto rounded-2xl pt-3 shadow-lg"
-              src={account2}
-              alt=""
-            />
-            <div className="step text-center bg-white text-black p-8 pt-10 rounded-4xl shadow-md">
-              <h1 className="text-xl font-bold text-red-500">Step 2</h1>
-              <h1>Take a selfi and put your digital signature</h1>
-            </div>
-          </div>
-
-          <div className="one flex flex-col justify-center items-center hover:scale-105  transition duration-200">
-            <img
-              className="w-full bg-white max-w-[200px] h-auto rounded-2xl pt-3 shadow-lg"
-              src={account3}
-              alt=""
-            />
-            <div className="step text-center bg-white text-black p-8 pt-10 rounded-4xl shadow-md">
-              <h1 className="text-xl font-bold text-red-500">Step 3</h1>
-              <h1>Set your 4-digit pin and enter app</h1>
-            </div>
-          </div>
+        <div className="nagad-app grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[account1, account2, account3].map((imgSrc, idx) => (
+            <motion.div
+              key={idx}
+              className="flex flex-col justify-center items-center hover:scale-105 transition duration-300"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.2, duration: 0.5 }}
+            >
+              <img
+                className="bg-white w-full max-w-[180px] sm:max-w-[200px] h-auto rounded-2xl pt-3 shadow-lg mb-[-25px]"
+                src={imgSrc}
+                alt={`Step ${idx + 1}`}
+              />
+              <div className="bg-white text-black p-6 sm:p-8 mt-4 rounded-3xl shadow-md w-full max-w-sm">
+                <h1 className="text-lg sm:text-xl font-bold text-red-500 mb-2">
+                  Step {idx + 1}
+                </h1>
+                <p className="text-sm sm:text-base">
+                  {idx === 0 && "Scan your NID and share necessary information"}
+                  {idx === 1 && "Take a selfie and put your digital signature"}
+                  {idx === 2 && "Set your 4-digit PIN and enter the app"}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        <div className="app ">
+        {/* Buttons */}
+        <motion.div
+          className="app mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
           <Link
             to="https://play.google.com/store/apps/details?id=com.konasl.nagad&hl=bn"
-            className="btn btn-neutral bg-red-500 rounded-3xl my-5 hover:bg-white hover:text-red-500"
+            className="btn bg-red-500 text-white rounded-3xl px-6 py-2 hover:bg-white hover:text-red-500 hover:border hover:border-red-500 transition duration-200"
           >
             Download App
           </Link>
           <Link
             to="/appdetails"
-            className=" btn  bg-white text-red-500 rounded-3xl border-red-500 ml-5 hover:bg-red-500 hover:text-white "
+            className="btn bg-white text-red-500 rounded-3xl border border-red-500 px-6 py-2 hover:bg-red-500 hover:text-white transition duration-200"
           >
             Learn More
           </Link>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Gif */}
-      <div className="giffaq mt-10 px-[7%] flex flex-col justify-center items-center overflow-hidden">
+      <motion.div
+        className="giffaq mt-10 px-[7%] flex flex-col justify-center items-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <a href="#">
-          <div className=" w-180 max-w-4xl aspect-video h-45 object-contain">
+          <div className="w-180 max-w-4xl aspect-video h-45 object-contain">
             <iframe
               src={faqgif}
               title="FAQ Animation"
@@ -209,29 +218,65 @@ const HomePage = () => {
             ></iframe>
           </div>
         </a>
-      </div>
+      </motion.div>
 
       {/* dfs section */}
-      <div className="dfs px-[7%] flex flex-col justify-center items-center">
-        <h1 className=" text-3xl font-bold text-center my-7">Nagad - A DFS of the Bangladesh Post Office</h1>
-        <img src={dfs} className="rounded-3xl" alt="" />
-        <p className="my-7 text-center">Nagad is an innovative and promising digital financial service of Bangladesh Post Office that embarked upon a glorious journey on March 26, 2019. After its inception, Nagad has financially included more than 9 crore people only in five years.</p>
+      <motion.div
+        className="px-[7%] sm:px-[7%] flex flex-col justify-center items-center text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-2xl sm:text-3xl font-bold my-6 sm:my-7">
+          Nagad - A DFS of the Bangladesh Post Office
+        </h1>
+
+      <div className="w-full max-w-4xl h-[250px]  md:h-[450px] overflow-hidden rounded
+                sm:max-w-full sm:h-screen">
+  <img
+    src={dfs}
+    alt="Nagad DFS"
+    className="w-full h-[85%] object-maintain"
+  />
+</div>
+
+
+
+        <p className="my-5 sm:my-7 max-w-2xl">
+          Nagad is an innovative and promising digital financial service of
+          Bangladesh Post Office that embarked upon a glorious journey on March
+          26, 2019. After its inception, Nagad has financially included more
+          than 9 crore people only in five years.
+        </p>
+
         <Link
           to="/nagadfamily"
-          className=" btn  bg-white text-red-500 rounded-3xl border-red-500 hover:bg-red-500 hover:text-white "
+          className="btn bg-white text-red-500 rounded-3xl border border-red-500 hover:bg-red-500 hover:text-white px-6 py-2 mt-2"
         >
           Learn More
         </Link>
-      </div>
+      </motion.div>
 
       {/* nagad safty */}
-      <div className="safty px-[7%] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-10">
+      <motion.div
+        className="safty px-[7%] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="one">
-          <img src={safty} className="rounded-3xl" alt="" />
+          <img src={safty} className="rounded" alt="Beware of Frauds" />
         </div>
         <div className="one ">
           <h1 className="text-3xl font-bold my-5"> Beware Of Frauds</h1>
-          <p className=" my-5">Do not share the PIN, OTP or account balance of your Nagad account with anyone. Fraudsters can take advantage of your vulnerability to steal your hard-earned money from your account. Even by using your account, they can scam others by pretending to be you</p>
+          <p className="my-5">
+            Do not share the PIN, OTP or account balance of your Nagad account
+            with anyone. Fraudsters can take advantage of your vulnerability to
+            steal your hard-earned money from your account. Even by using your
+            account, they can scam others by pretending to be you
+          </p>
           <Link
             to="/nagadsafty"
             className=" btn my-5 bg-white text-red-500 rounded-3xl border-red-500 hover:bg-red-500 hover:text-white "
@@ -239,10 +284,17 @@ const HomePage = () => {
             Learn More
           </Link>
         </div>
-      </div>
+      </motion.div>
 
       {/* Galary section */}
-      <NagadGalary />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <NagadGalary />
+      </motion.div>
 
       {/* Popup Ad  */}
       <DraggablePopup />
@@ -251,3 +303,12 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
+
+
+
+
+
+
+

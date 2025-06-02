@@ -51,11 +51,9 @@ const NagadFAQ = () => {
   };
 
   return (
-    <div className="px-[7%]  py-8 mt-25">
 
-
-      {/* Carousel */}
-      <div ref={sliderRef} className="keen-slider rounded-xl overflow-hidden shadow-xl mb-8">
+     <div>
+<div ref={sliderRef} className="keen-slider rounded overflow-hidden shadow-xl mb-8 ">
         {images.map((img, index) => (
           <div key={index} className="keen-slider__slide">
             <img
@@ -67,6 +65,14 @@ const NagadFAQ = () => {
           </div>
         ))}
       </div>
+
+    <div className="px-[7%]  py-8 mt-25">
+ 
+
+
+
+      {/* Carousel */}
+      
 
       {/* Header */}
       <>
@@ -128,6 +134,8 @@ const NagadFAQ = () => {
 
 
 
+
+    </div>
 
     </div>
   );

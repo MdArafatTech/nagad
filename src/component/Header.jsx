@@ -22,12 +22,13 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <div className="fixed top-0 left-0 right-0 z-777 bg-transparent px-[5%]">
       <div className="drawer">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center">
           {/* Navbar */}
-          <div className="navbar mt-4 px-4 md:px-10 w-full max-w-screen-xl mx-auto bg-white text-black shadow shadow-blue-100 rounded-4xl py-2 flex justify-between items-center">
+          <div className="navbar mt-4 px-4 md:px-10 w-full max-w-screen-xl mx-auto bg-white/65 backdrop-blur-md text-black shadow shadow-blue-100 rounded-4xl py-2 flex justify-between items-center hover:bg-white">
+
             <Link to="/">
               <img className="h-10" src={headericon} alt="logo" />
             </Link>
@@ -39,7 +40,7 @@ const Header = () => {
                   { to: "/", label: "Home" },
                   { to: "/services", label: "Services" },
                   { to: "/offers", label: "Offers" },
-                  { to: "/about-us", label: "About Us" },
+                  { to: "/aboutus", label: "AboutUs" },
                   { to: "/career", label: "Career" },
                 ].map(({ to, label }) => (
                   <li key={to}>
@@ -81,7 +82,7 @@ const Header = () => {
                 { to: "/", label: "Home" },
                 { to: "/services", label: "Services" },
                 { to: "/offers", label: "Offers" },
-                { to: "/about-us", label: "About Us" },
+                { to: "/aboutus", label: "AboutUs" },
                 { to: "/career", label: "Career" },
               ].map(({ to, label }) => (
                 <li key={to}>
@@ -96,28 +97,30 @@ const Header = () => {
             </ul>
 
             {/* Social Icons */}
-            <div className="w-full flex justify-center items-center px-4 mt-10">
-              <div className="flex gap-4 text-2xl mt-[-150px]">
-                {[
-                  { href: "https://www.instagram.com", icon: <FaInstagram /> },
-                  { href: "https://www.facebook.com", icon: <FaFacebookF /> },
-                  { href: "https://www.youtube.com", icon: <FaYoutube /> },
-                  { href: "https://www.linkedin.com", icon: <FaLinkedinIn /> },
-                  { href: "https://www.tiktok.com", icon: <FaTiktok /> },
-                ].map(({ href, icon }) => (
-                  <a
-                    key={href}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-current transition"
-                    onClick={closeDrawer}
-                  >
-                    {icon}
-                  </a>
-                ))}
-              </div>
-            </div>
+            {/* Social Icons */}
+<div className="w-full flex justify-center items-center px-4 mt-10">
+  <div className="flex gap-4 text-2xl mt-[-150px]">
+    {[
+      { href: "https://www.instagram.com/mynagad/?hl=en", icon: <FaInstagram /> },
+      { href: "https://www.facebook.com/share/1Bwbu4CZEw/", icon: <FaFacebookF /> },
+      { href: "https://www.youtube.com/channel/UCxZQ-w684G_71KcJ-8Hjhlw", icon: <FaYoutube /> },
+      { href: "https://bd.linkedin.com/company/mynagad", icon: <FaLinkedinIn /> },
+      { href: "https://www.tiktok.com/@nagad", icon: <FaTiktok /> },
+    ].map(({ href, icon }) => (
+      <a
+        key={href}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-red-500 rounded-full p-2 hover:bg-blue-600 transition-colors flex items-center justify-center"
+        onClick={closeDrawer}
+      >
+        <span className="text-white">{icon}</span>
+      </a>
+    ))}
+  </div>
+</div>
+
           </div>
         </div>
       </div>

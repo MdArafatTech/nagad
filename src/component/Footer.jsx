@@ -73,7 +73,7 @@ const Footer = () => {
           <Link to="/nagadfaq" className="bg-red-500 text-white px-4 py-2 rounded-3xl hover:bg-white hover:text-red-500 border border-red-500 transition text-center">
             FAQ
           </Link>
-          <Link to="#" className="bg-red-500 text-white px-4 py-2 rounded-3xl hover:bg-white hover:text-red-500 border border-red-500 transition">
+          <Link to="/media" className="bg-red-500 text-white px-4 py-2 rounded-3xl hover:bg-white hover:text-red-500 border border-red-500 transition">
             Media Center
           </Link>
           <Link to="/contact" className="bg-red-500 text-white px-4 py-2 rounded-3xl hover:bg-white hover:text-red-500 border text-center border-red-500 transition">

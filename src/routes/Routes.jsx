@@ -17,6 +17,10 @@ import Login from '../component/Login';
 import Register from '../component/Register';
 import AuthStatus from '../component/AuthStatus';
 import ScrollToTop from '../component/ScrollToTop';
+import Career from '../pages/Career';
+import AllJob from '../component/AllJob';
+import Media from '../pages/Media';
+import Services from '../pages/Services';
 
 
 
@@ -35,12 +39,20 @@ const Routes = createBrowserRouter (
                     element:<HomePage></HomePage>
                 },
                 {
+                    path:"/services",
+                    element:<Services></Services>
+                },
+                {
                     path:"/aboutus",
                     element:<AboutUs></AboutUs>
                 },
                 {
                     path:"/contact",
                     element:<Contact></Contact>
+                },
+                {
+                    path:"/career",
+                    element:<Career></Career>
                 },
                 {
                     path:"/offer/:id",
@@ -58,6 +70,11 @@ const Routes = createBrowserRouter (
                 {
                     path:"/terms",
                     element:<Terms></Terms>
+                },
+                
+                {
+                    path:"/media",
+                    element:<Media></Media>
                 },
                 
                 {
@@ -92,6 +109,11 @@ const Routes = createBrowserRouter (
                 {
                     path:"/scrolltotop",
                     element:<ScrollToTop></ScrollToTop>
+                },
+             
+                {
+                    path:"/alljob",
+                    element:<AllJob></AllJob>
                 },
              
                 

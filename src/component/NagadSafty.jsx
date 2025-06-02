@@ -12,7 +12,7 @@ const NagadSafty = () => {
 
     return (
 
-          <div className='mt-25'>
+          <div className=''>
 
             <img src={safty} alt="Nagad Safety" className="w-full rounded-xl shadow" />
         <div className=" px-[7%] py-6 space-y-6">

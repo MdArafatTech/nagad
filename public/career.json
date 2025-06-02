@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Md. Raiyan Bin Mhosin",
+    "title": "Executive-Business Analitics",
+    "description": "Specializes in analyzing business data to support strategic decisions and drive efficiency.",
+    "image": "Faiyaz.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Zeba Mubashera",
+    "title": "HR Business Partner",
+    "description": "Dedicated to aligning human resources strategy with business goals to optimize workforce performance.",
+    "image": "Zeba.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Siddikur Rahamn Shohan",
+    "title": "Executive- Software QA Engineer",
+    "description": "Ensures software quality through meticulous testing, identifying bugs, and verifying system functionality.",
+    "image": "Siddikur.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Afroza Zaman Roza",
+    "title": "Executive- SBU Management Strategy",
+    "description": "Develops and implements strategies to manage Strategic Business Units for sustainable growth.",
+    "image": "Afroza.jpg"
+  }
+]

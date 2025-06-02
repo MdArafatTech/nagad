@@ -45,7 +45,7 @@ const NagadGalary = () => {
             <img
               src={galaryMap[img.image]}
               alt={`Gallery ${img.id}`}
-              className="w-full h-64 object-cover"
+              className="w-full h-full object-maintain"
             />
           </div>
         ))}
