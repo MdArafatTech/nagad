@@ -53,7 +53,7 @@ const NagadFAQ = () => {
   return (
 
      <div>
-<div ref={sliderRef} className="keen-slider rounded overflow-hidden shadow-xl mb-8 ">
+<div ref={sliderRef} className="keen-slider rounded overflow-hidden shadow-xl  mt-25">
         {images.map((img, index) => (
           <div key={index} className="keen-slider__slide">
             <img
@@ -77,19 +77,19 @@ const NagadFAQ = () => {
       {/* Header */}
       <>
       <DraggablePopup/>
-      <div className="max-w-4xl mx-auto p-6 text-center mt-20">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Nagad Bangladesh FAQ Website</h1>
+      <div className="max-w-4xl mx-auto p-6 text-center  shadow-xl ">
+        <h1 className="text-4xl  font-bold mb-4">Welcome to Nagad Bangladesh FAQ Website</h1>
         <p className="text-lg ">
           Explore FAQs, offers, and more about Nagad digital financial services.
         </p>
       </div>
     </>
-      <h1 className="text-3xl font-bold text-center text-red-600 mb-6">
+      <h1 className="text-3xl font-bold text-center text-red-600 my-5">
         Nagad Bangladesh - FAQ
       </h1>
 
       {/* FAQ Section */}
-      <div className="space-y-4 ">
+      <div className="space-y-4 shadow-xl p-4 rounded ">
         {faqs.map((faq, index) => (
           <div
             key={index}

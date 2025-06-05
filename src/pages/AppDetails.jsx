@@ -16,14 +16,23 @@ const AppDetails = () => {
     }
 
     return (
-        <div className="px-[7%] w-full mx-auto mt-25">
-            <img
-                className="w-full max-h-[80vh] object-contain rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
-                src={appimg}
-                alt="Nagad App"
-            />
 
-            <h1 className="text-3xl font-bold text-center my-10">
+        <div>
+
+<img
+   className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 '
+  src={appimg}
+  alt="Nagad App"
+/>
+
+
+
+        <div className="px-[7%] w-full mx-auto mt-10 ">
+            
+
+            
+
+            <h1 className="text-3xl font-bold text-center ">
                 {appData.title}: Open Nagad Account
             </h1>
 
@@ -50,6 +59,7 @@ const AppDetails = () => {
                     <li key={index}>{item}</li>
                 ))}
             </ul>
+        </div>
         </div>
     );
 };

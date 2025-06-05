@@ -14,12 +14,12 @@ const NagadFamily = () => {
   if (!data) return <div className="text-center py-10">Loading...</div>;
 
   return (
-<div className='mt-25'>
+<div className=''>
 
      <img
         src={dfs1}
         alt="Digital Financial Services"
-        className="w-full rounded-2xl shadow-md"
+        className='w-full h-47  md:h-85 lg:h-full  rounded-xl mt-20'
       />
     <div className=" px-[7%] py-10  bg-white  p-5 rounder-2xl text-black">
        

@@ -40,12 +40,12 @@ const NagadGalary = () => {
         {images.map((img) => (
           <div
             key={img.id}
-            className="rounded-2xl overflow-hidden shadow-md border-4 border-red-500 hover:scale-105 transition-transform duration-200"
+            className="rounded-2xl overflow-hidden shadow-xl border-2 border-red-500 hover:scale-105 transition-transform duration-200"
           >
             <img
               src={galaryMap[img.image]}
               alt={`Gallery ${img.id}`}
-              className="w-full h-full object-maintain"
+              className="w-full h-full object-maintain "
             />
           </div>
         ))}

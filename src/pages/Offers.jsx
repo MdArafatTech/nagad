@@ -66,7 +66,7 @@ const Offers = () => {
         showStatus={false}
         showIndicators={true}
         interval={3000}
-        className="rounded-xl overflow-hidden shadow-lg mt-10"
+        className="rounded overflow-hidden shadow-lg mt-8"
       >
         {carouselImages.map((item) => (
           <div key={item.id}>

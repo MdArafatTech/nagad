@@ -4,7 +4,7 @@ import { FaPhone } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { IoLocationOutline } from "react-icons/io5";
-import { Link } from "react-router-dom"; // fixed react-router import
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -45,14 +45,14 @@ const Contact = () => {
 
   return (
     <div className="">
-     <img
-  src={contact1}
-  alt="Contact"
-  className="w-full h-full max-h-[100vh] object-cover rounded mb-6 shadow-md"
-/>
+      <img
+        src={contact1}
+        alt="Contact"
+       className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 mb-5'
+      />
 
       <div className="px-6 sm:px-10 md:px-[7%]">
-        <div className="info bg-white rounded-2xl py-5 px-6 sm:px-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="info bg-white rounded-2xl py-5 px-6 sm:px-10 grid grid-cols-1 lg:grid-cols-2 gap-8 shadow-md shadow-gray-400">
           {/* Contact Form with Captcha */}
           <div className="contact-form space-y-4 text-center max-w-lg mx-auto lg:mx-0">
             <h2 className="text-2xl font-bold text-black mb-2">
@@ -62,7 +62,7 @@ const Contact = () => {
               <p className="text-sm font-medium text-red-500">{message}</p>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4 pt-6">
+            <form onSubmit={handleSubmit} className="space-y-4  shadow-sm p-4 rounded shadow-red-500">
               <input
                 type="text"
                 name="name"
@@ -122,12 +122,11 @@ const Contact = () => {
           </div>
 
           {/* Contact Details Section */}
-          <div className="max-w-lg mx-auto lg:mx-0">
+          <div className="max-w-lg mx-auto lg:mx-0 shadow-sm p-4 rounded shadow-red-500">
             <h2 className="text-3xl font-bold text-black text-center mb-6 lg:text-left">
               Contact Us
             </h2>
             <div className="contact-info space-y-5">
-              {/* Each contact item */}
               {[
                 {
                   icon: <FaPhone className="text-red-500 text-xl" />,
@@ -201,11 +200,11 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="locator mx-6 sm:mx-[7%] py-10 bg-white rounded-3xl mt-10">
+      <div className="locator mx-6 sm:mx-[7%] py-10 bg-white rounded-3xl mt-10 shadow-md shadow-gray-400">
         <h1 className="text-3xl text-black font-bold text-center mb-6">
           Nagad Locators
         </h1>
-        <div className="py-10 grid grid-cols-2 md:grid-cols-4 gap-5 px-6 sm:px-0">
+        <div className="py-10 grid grid-cols-2 md:grid-cols-4 gap-5 px-6 ">
           {[
             "Nagad Sheba",
             "Uddokta Locator",

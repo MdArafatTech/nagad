@@ -63,31 +63,31 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="w-full mt-10 ">
+    <div className="w-full mt-10">
       {/* Header Carousel */}
-    <Swiper
-  modules={[Autoplay, Pagination]}
-  autoplay={{ delay: 3000 }}
-  pagination={{ clickable: true }}
-  loop={true}
-  className=" overflow-hidden shadow-lg  w-full h-[300px] rounded sm:h-[400px] md:h-[500px] lg:h-[600px]"
->
-  {images.map((item) => (
-    <SwiperSlide key={item.id} className="w-full h-full">
-      <img
-        src={imageMap[item.image]}
-        alt={`Header ${item.id}`}
-        className="w-full h-[80%] object-maintain"
-      />
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3000 }}
+        pagination={{ clickable: true }}
+        loop={true}
+        className="overflow-hidden w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+      >
+        {images.map((item) => (
+          <SwiperSlide key={item.id} className="w-full h-full">
+            <img
+              src={imageMap[item.image]}
+              alt={`Header ${item.id}`}
+              className="w-full h-[80%] object-cover"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* Offers Section Title */}
       <div className="text-3xl text-center font-bold my-6">
         <h1> Current Offers</h1>
       </div>
+
       <div className="px-[7%]">
         {/* Offers Carousel */}
         <Swiper
@@ -106,7 +106,7 @@ const HomePage = () => {
         >
           {offers.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+              <div className="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-xl transform hover:scale-105 transition duration-300">
                 <div className="relative">
                   <img
                     src={imageMap[item.image]}
@@ -139,9 +139,9 @@ const HomePage = () => {
         </Link>
       </div>
 
-     {/* Account Details */}
+      {/* Account Details */}
       <motion.div
-        className="account px-4 sm:px-[7%] my-10 text-center shadow-2xl py-10 rounded-xl"
+        className="px-4 sm:px-[7%] my-10 text-center py-10 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -151,7 +151,7 @@ const HomePage = () => {
           3 easy steps to open your Nagad account
         </h2>
 
-        <div className="nagad-app grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[account1, account2, account3].map((imgSrc, idx) => (
             <motion.div
               key={idx}
@@ -161,11 +161,11 @@ const HomePage = () => {
               transition={{ delay: idx * 0.2, duration: 0.5 }}
             >
               <img
-                className="bg-white w-full max-w-[180px] sm:max-w-[200px] h-auto rounded-2xl pt-3 shadow-lg mb-[-25px]"
+                className="bg-white w-full max-w-[180px] sm:max-w-[200px] h-auto rounded-2xl pt-3 shadow-[0_4px_20px_rgba(0,0,0,0.2)] mb-[-25px]"
                 src={imgSrc}
                 alt={`Step ${idx + 1}`}
               />
-              <div className="bg-white text-black p-6 sm:p-8 mt-4 rounded-3xl shadow-md w-full max-w-sm">
+              <div className="bg-white text-black p-6 sm:p-8 mt-4 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.2)] w-full max-w-sm">
                 <h1 className="text-lg sm:text-xl font-bold text-red-500 mb-2">
                   Step {idx + 1}
                 </h1>
@@ -181,20 +181,20 @@ const HomePage = () => {
 
         {/* Buttons */}
         <motion.div
-          className="app mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
+          className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <Link
             to="https://play.google.com/store/apps/details?id=com.konasl.nagad&hl=bn"
-            className="btn bg-red-500 text-white rounded-3xl px-6 py-2 hover:bg-white hover:text-red-500 hover:border hover:border-red-500 transition duration-200"
+            className="bg-red-500 text-white rounded-3xl px-6 py-2 hover:bg-white hover:text-red-500 hover:border hover:border-red-500 transition duration-200"
           >
             Download App
           </Link>
           <Link
             to="/appdetails"
-            className="btn bg-white text-red-500 rounded-3xl border border-red-500 px-6 py-2 hover:bg-red-500 hover:text-white transition duration-200"
+            className="bg-white text-red-500 rounded-3xl border border-red-500 px-6 py-2 hover:bg-red-500 hover:text-white transition duration-200 "
           >
             Learn More
           </Link>
@@ -203,7 +203,7 @@ const HomePage = () => {
 
       {/* Gif */}
       <motion.div
-        className="giffaq mt-10 px-[7%] flex flex-col justify-center items-center overflow-hidden"
+        className="mt-10 px-[7%] flex flex-col justify-center items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.2)] rounded-xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -220,74 +220,63 @@ const HomePage = () => {
         </a>
       </motion.div>
 
-      {/* dfs section */}
+      {/* DFS section */}
       <motion.div
-        className="px-[7%] sm:px-[7%] flex flex-col justify-center items-center text-center"
+        className="px-[7%] flex flex-col justify-center items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.2)] rounded-xl mt-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-2xl sm:text-3xl font-bold my-6 sm:my-7">
+        <h1 className="text-2xl sm:text-3xl font-bold my-6">
           Nagad - A DFS of the Bangladesh Post Office
         </h1>
-
-      <div className="w-full max-w-4xl h-[250px]  md:h-[450px] overflow-hidden rounded
-                sm:max-w-full sm:h-screen">
-  <img
-    src={dfs}
-    alt="Nagad DFS"
-    className="w-full h-[85%] object-maintain"
-  />
-</div>
-
-
-
-        <p className="my-5 sm:my-7 max-w-2xl">
-          Nagad is an innovative and promising digital financial service of
-          Bangladesh Post Office that embarked upon a glorious journey on March
-          26, 2019. After its inception, Nagad has financially included more
-          than 9 crore people only in five years.
+        <div className="w-full max-w-4xl h-[250px] md:h-[450px] overflow-hidden rounded">
+          <img
+            src={dfs}
+            alt="Nagad DFS"
+            className="w-full lg:h-full object-cover h-[180px]  rounded-xl"
+          />
+        </div>
+        <p className="my-5 max-w-2xl">
+          Nagad is an innovative and promising digital financial service of Bangladesh Post Office that embarked upon a glorious journey on March 26, 2019. After its inception, Nagad has financially included more than 9 crore people only in five years.
         </p>
-
         <Link
-          to="/nagadfamily"
-          className="btn bg-white text-red-500 rounded-3xl border border-red-500 hover:bg-red-500 hover:text-white px-6 py-2 mt-2"
+          to="/aboutus"
+          className="bg-white text-red-500 rounded-3xl border border-red-500 hover:bg-red-500 hover:text-white px-6 py-2 mt-2 mb-3"
         >
           Learn More
         </Link>
       </motion.div>
 
-      {/* nagad safty */}
+      {/* Nagad Safety */}
       <motion.div
-        className="safty px-[7%] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-10"
+        className="px-[7%] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-10 shadow-[0_4px_20px_rgba(0,0,0,0.2)] rounded-xl pb-4"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="one">
-          <img src={safty} className="rounded" alt="Beware of Frauds" />
+        <div>
+          <img src={safty} className="rounded mt-3" alt="Beware of Frauds" />
         </div>
-        <div className="one ">
+        <div>
           <h1 className="text-3xl font-bold my-5"> Beware Of Frauds</h1>
           <p className="my-5">
-            Do not share the PIN, OTP or account balance of your Nagad account
-            with anyone. Fraudsters can take advantage of your vulnerability to
-            steal your hard-earned money from your account. Even by using your
-            account, they can scam others by pretending to be you
+            Do not share the PIN, OTP or account balance of your Nagad account with anyone. Fraudsters can take advantage of your vulnerability to steal your hard-earned money from your account. Even by using your account, they can scam others by pretending to be you.
           </p>
           <Link
             to="/nagadsafty"
-            className=" btn my-5 bg-white text-red-500 rounded-3xl border-red-500 hover:bg-red-500 hover:text-white "
+            className=" bg-white text-red-500 rounded-3xl border border-red-500 hover:bg-red-500 hover:text-white px-6 py-2  "
           >
             Learn More
           </Link>
         </div>
       </motion.div>
 
-      {/* Galary section */}
+      {/* Gallery section */}
       <motion.div
+        className="shadow-[0_4px_20px_rgba(0,0,0,0.2)] rounded-xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -296,19 +285,10 @@ const HomePage = () => {
         <NagadGalary />
       </motion.div>
 
-      {/* Popup Ad  */}
+      {/* Popup Ad */}
       <DraggablePopup />
     </div>
   );
 };
 
 export default HomePage;
-
-
-
-
-
-
-
-
-

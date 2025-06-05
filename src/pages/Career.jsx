@@ -58,11 +58,11 @@ const Career = () => {
       <img
         src={careerImg}
         alt="Career at Nagad"
-        className="w-full h-[310px] md:h-[450px] object-cover rounded-b-xl"
+    className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0'
       />
 
       {/* Career intro */}
-      <div className="w-full max-w-4xl mx-auto text-center p-6 md:p-10 rounded-xl bg-white my-10 shadow">
+      <div className="w-full max-w-4xl mx-auto text-center p-6 md:p-10 rounded-xl bg-white mb-10 shadow">
         <h1 className="text-2xl md:text-3xl text-red-500 font-bold mb-4">Career</h1>
         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           We believe in the indomitable spirit that drives positive change. An attitude of “never say never” defines us.
@@ -77,7 +77,7 @@ const Career = () => {
         <img
           src={careerImg}
           alt="Career at Nagad"
-          className="w-full h-[300px] md:h-[450px] object-cover rounded"
+          className='w-full h-47 md:mt-0 md:h-85 lg:h-full   lg:mt-0 rounded'
         />
         <div className="text-center mt-6">
           <p className="text-red-700 mb-4">

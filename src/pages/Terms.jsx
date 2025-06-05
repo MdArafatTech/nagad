@@ -20,7 +20,8 @@ const Terms = () => {
         <img
   src={term}
   alt="Terms and Conditions"
-  className="w-full h-auto max-h-[100vh] object-maintain rounded-lg mb-6 shadow-md"
+  // className="w-full lg:h-full  h-60 object-cover rounded-b-xl"
+  className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 '
 />
 
       </div>

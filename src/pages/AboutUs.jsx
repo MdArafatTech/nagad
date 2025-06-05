@@ -16,20 +16,20 @@ const AboutUs = () => {
   }
 
   return (
-    <div className="bg-stone-900 text-white">
+    <div className=" ">
       {/* Top Image */}
       <div className="w-full max-h-[500px] overflow-hidden">
         <img
           src={img}
           alt="About Banner"
-          className="w-full h-full object-cover rounded-b-xl"
+           className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 rounded-xl'
         />
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6  py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 shadow-2xl  py-10">
         {/* Introduction */}
-        <section className="mb-10">
+        <section className="mb-10 shadow-xl p-2">
           <h2 className="text-3xl font-bold mb-4 border-b pb-2">Introduction</h2>
           <p className="mb-3">{data.introduction.summary}</p>
           <p className="text-sm sm:text-base">
@@ -38,7 +38,7 @@ const AboutUs = () => {
         </section>
 
         {/* History */}
-        <section className="mb-10">
+        <section className="mb-10 shadow-xl p-2">
           <h2 className="text-3xl font-bold mb-4 border-b pb-2">History</h2>
           <p><strong>Launch Date:</strong> {data.history.launchDate}</p>
           <p><strong>Authority:</strong> {data.history.authority}</p>
@@ -50,7 +50,7 @@ const AboutUs = () => {
         </section>
 
         {/* Management Board */}
-        <section className="mb-10">
+        <section className="mb-10 shadow-xl p-2">
           <h2 className="text-3xl font-bold mb-4 border-b pb-2">Management Board</h2>
           <p className="mb-2"><strong>Formed Date:</strong> {data.managementBoard.formedDate}</p>
           <ul className="list-disc pl-5 space-y-2">
@@ -64,14 +64,14 @@ const AboutUs = () => {
         </section>
 
         {/* Impact */}
-        <section className="mb-10">
+        <section className="mb-10 shadow-xl p-2">
           <h2 className="text-3xl font-bold mb-4 border-b pb-2">Impact</h2>
           <p><strong>Customer Base:</strong> {data.impact.customers}</p>
           <p><strong>Uddokta Network:</strong> {data.impact.uddoktaNetwork}</p>
         </section>
 
         {/* Awards */}
-        <section>
+        <section className="shadow-xl p-2">
           <h2 className="text-3xl font-bold mb-4 border-b pb-2">Awards & Recognitions</h2>
           <ul className="space-y-5">
             {data.awards.map((award, i) => (

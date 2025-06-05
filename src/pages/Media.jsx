@@ -51,13 +51,13 @@ const Media = () => {
         <img
           src={mediaImg}
           alt="Media Banner"
-          className="w-full h-auto max-h-[100vh] object-contain rounded-lg mb-6 shadow-md"
+        className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 '
         />
       </div>
 
       <div className="media-center px-[7%] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6 my-15">
         {/* Feature Section */}
-        <div className="bg-blue-50 text-black p-4 rounded-xl shadow-md flex flex-col justify-center items-center">
+        <div className="bg-blue-50 text-black p-4 rounded-xl shadow-xl flex flex-col justify-center items-center">
           <h1 className="text-2xl font-bold mb-2">Feature</h1>
           <h2 className="text-lg font-semibold">
             নগদে প্রশাসক নিয়গ দিল বাংলাদেশ ব্যাংক
@@ -83,7 +83,7 @@ const Media = () => {
         </div>
 
         {/* Press Releases */}
-        <div className="bg-blue-50 text-black p-4 rounded-xl shadow-md">
+        <div className="bg-blue-50 text-black p-4 rounded-xl shadow-xl">
           <h1 className="text-2xl font-bold mb-4">Press Releases</h1>
           <div className="grid gap-4">
             {pressData.map((item) => (
@@ -105,7 +105,7 @@ const Media = () => {
       </div>
 
       {/* Latest Release Carousel */}
-      <div className="px-[7%] my-10">
+      <div className="px-[7%] my-10 shadow-xl pb-3" >
         <h1 className="text-2xl text-center font-bold mb-6">
           Latest Release
         </h1>
