@@ -51,7 +51,7 @@ const Media = () => {
         <img
           src={mediaImg}
           alt="Media Banner"
-        className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 '
+    className='w-full h-47 md:mt-0 md:h-85 lg:h-full lg:rounded-none mt-22  lg:mt-0 rounded-xl '
         />
       </div>
 

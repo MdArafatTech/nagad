@@ -53,14 +53,14 @@ const NagadFAQ = () => {
   return (
 
      <div>
-<div ref={sliderRef} className="keen-slider rounded overflow-hidden shadow-xl  mt-25">
+<div ref={sliderRef} className="keen-slider rounded overflow-hidden shadow-xl  mt-23 lg:mt-0">
         {images.map((img, index) => (
           <div key={index} className="keen-slider__slide">
             <img
               src={img}
               alt={`nagad-slide-${index + 1}`}
-             className="w-full h-auto max-h-[80vh] object-contain"
-
+            //  className="w-full h-auto max-h-[80vh] object-contain"
+  className='w-full max-h-full    '
             />
           </div>
         ))}

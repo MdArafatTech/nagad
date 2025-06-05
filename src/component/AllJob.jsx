@@ -7,7 +7,7 @@ const AllJob = () => {
              <img
                     src={All}
                     alt="Career at Nagad"
-                    className="w-full h-[310px] md:h-[450px] object-cover rounded-b-xl"
+                     className='w-full h-47 md:mt-0 md:h-85 lg:h-full lg:rounded-none mt-22  lg:mt-0 rounded-xl '
                   />
 
 

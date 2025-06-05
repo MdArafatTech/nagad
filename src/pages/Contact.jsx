@@ -48,7 +48,7 @@ const Contact = () => {
       <img
         src={contact1}
         alt="Contact"
-       className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 mb-5'
+       className='w-full h-47 md:mt-0 md:h-85 lg:h-full lg:rounded-none mt-22  lg:mt-0 mb-5 rounded-xl'
       />
 
       <div className="px-6 sm:px-10 md:px-[7%]">

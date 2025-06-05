@@ -15,7 +15,7 @@ const NagadSafty = () => {
       <img
         src={safty}
         alt="Nagad Safety"
-        className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 '
+        className='w-full h-47 md:mt-0 md:h-85 lg:h-full lg:rounded-none mt-22  lg:mt-0 rounded-xl '
       />
 
       <div className=" px-[7%] py-6 space-y-6">

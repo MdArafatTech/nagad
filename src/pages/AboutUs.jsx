@@ -22,12 +22,12 @@ const AboutUs = () => {
         <img
           src={img}
           alt="About Banner"
-           className='w-full h-47 md:mt-0 md:h-85 lg:h-full mt-22  lg:mt-0 rounded-xl'
+           className='w-full h-47 md:mt-0 md:h-85 lg:h-full lg:rounded-none mt-22  lg:mt-0 rounded-xl'
         />
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 shadow-2xl  py-10">
+      <div className="max-w-7xl mx-auto my-2 px-4 sm:px-6 shadow-2xl  py-10">
         {/* Introduction */}
         <section className="mb-10 shadow-xl p-2">
           <h2 className="text-3xl font-bold mb-4 border-b pb-2">Introduction</h2>

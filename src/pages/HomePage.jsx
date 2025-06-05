@@ -63,14 +63,16 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="w-full mt-10">
+    <div className="w-full mt-22 lg:mt-0">
       {/* Header Carousel */}
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
         loop={true}
-        className="overflow-hidden w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+        // className="overflow-hidden w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded shadow-[0_4px_20px_rgba(0,0,0,0.2)] object-cover"
+
+        className='w-full lg:h-full h-[200px] max-h-full'
       >
         {images.map((item) => (
           <SwiperSlide key={item.id} className="w-full h-full">
